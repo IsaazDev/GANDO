@@ -1,8 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using GANDO.Models
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@{
+    var Times = "";
+    if (DateTime.Now.Hour > 12)
+    { Times = "Good Morning and Welcome to GANDO"; }
+    else
+    { Times = "Good Afternoon and Welcome to GANDO"; }
+}
+<html>
+<body>
+
+    <h1>@Times</h1>
+
+</body>
+</html>
