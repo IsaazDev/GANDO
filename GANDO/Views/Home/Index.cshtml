@@ -5,15 +5,26 @@
 
 @{
     var Times = "";
-    if (DateTime.Now.Hour > 12)
+    if (DateTime.Now.Hour < 12)
     { Times = "Good Morning and Welcome to GANDO"; }
     else
-    { Times = "Good Afternoon and Welcome to GANDO"; }
+    { Times = "Good Afternoon/Evening and Welcome to GANDO"; }
 }
 <html>
-<body> 
+
+<style>
+    p.outset {border-style: solid;}
+
+    body {
+  background-color: #449970;
+}
+</style>
+<body>
 
     <h1>@Times</h1>
+
+<p class="solid"> Welcome to our website, here we try to provide support for other people who are seeking support for
+    </p>
 
 </body>
 </html>
