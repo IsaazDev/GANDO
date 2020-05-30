@@ -1,30 +1,29 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@using GANDO.Models
 
 @{
     var Times = "";
     if (DateTime.Now.Hour < 12)
-    { Times = "Good Morning and Welcome to GANDO"; }
+    { Times = "Good Morning and Welcome to ForMen"; }
     else
-    { Times = "Good Afternoon/Evening and Welcome to GANDO"; }
+    { Times = "Good Afternoon/Evening and Welcome to ForMen"; }
 }
 <html>
 
 <style>
-    p.outset {border-style: solid;}
+    p.outset {
+        border-style: solid;
+    }
 
-    body {
-  background-color: #449970;
-}
+  
+    h1 {text-align: center;}
+    
 </style>
+
 <body>
-
     <h1>@Times</h1>
-
-<p class="solid"> Welcome to our website, here we try to provide support for other people who are seeking support for
-    </p>
-
 </body>
+
+
 </html>

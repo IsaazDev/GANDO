@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace GANDO.Models
 {
@@ -18,6 +19,15 @@ namespace GANDO.Models
         public string Address2 { get; set; }
         public string Country { get; set; }
         public string Postcode { get; set; }
+
+        [Required(ErrorMessage = "Please enter your User ID.")]
+        [Display(Name = "Username : ")]
+        public string UserId { get; set; }
+
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Please enter your Password.")]
+        [Display(Name = "Password : ")]
+        public string Password { get; set; }
 
 
     }

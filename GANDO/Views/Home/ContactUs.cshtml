@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <style>
     html {
         height: 100%;
@@ -64,46 +63,42 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
 </style>
+@RenderBody()
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-
 <body>
     <div class="registration-wrapper">
         <form id="form1" runat="server">
             <div>
                 <p>
                     <strong>
-                        <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
+                        <label for="fname" Text="Username" >First name:</label><br>
                     </strong>
                 </p>
                 <p>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <input type="text" TextBox id="TextBox1" name="fname" value=""><br>
                 </p>
                 <p>
                 <p>
                     <strong>
-                        <asp:Label ID="myInput" runat="server" Text="Password"></asp:Label>
+                        <label for="pwd" Text="Password">Password:</label>
                     </strong>
                 <p>
                     <strong>
-                        <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                        <input type="password" TextBox id="pwd" name="pwd"><br><br>
                     </strong>
                 </p>
 
 
                 <p>
-                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+                    <input type="submit" value="Submit" button id="Button1">
                 </p>
-                <p>
-
-                    <asp:Button ID="Button2" runat="server" Text="Register" OnClick="Button7_Click" />
-
-                </p>
+                
             </div>
         </form>
     </div>
+
+
+
     <script>
         function Password() {
             var p = document.getElementById("myInput");
@@ -115,10 +110,5 @@
             }
         }
     </script>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 </body>
 </html>
